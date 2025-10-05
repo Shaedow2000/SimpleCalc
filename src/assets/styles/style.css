@@ -7,10 +7,14 @@
   }
 
   .row {
-    @apply flex gap-x-3 w-fit 
+    @apply flex gap-6 w-fit 
   }
 
   .row > div {
-    @apply font-medium text-white text-3xl bg-gray-700 w-[74px] h-[74px] rounded-2xl flex justify-center items-center
+    @apply font-medium text-white text-3xl bg-gray-700 border-2 border-black w-[90px] h-[90px] rounded-2xl flex justify-center items-center
+  } 
+
+  .btn {
+    @apply cursor-pointer hover:brightness-[175%] active:brightness-[75%]
   }
 }
