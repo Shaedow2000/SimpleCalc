@@ -9,6 +9,11 @@ function BtnCLickEvent(): void {
     btn.addEventListener( 'click', (): void => {
       const symbol: string = btn.innerHTML.trim();
 
+      if ( resultScreen.innerHTML.trim() !== '' ) {
+          resultScreen.innerHTML = '';
+          calcScreen.innerHTML = '';
+      }
+
       if ( symbol !== '=' && symbol !== 'AC' && symbol !== 'DEL' ) {
         calcScreen.innerHTML += symbol;
       } else if ( symbol === 'AC' ) {
