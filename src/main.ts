@@ -1,7 +1,6 @@
 const btns: NodeListOf<Element> = document.querySelectorAll( '.btn' );
-const calcScreen = document.getElementById( 'calc' ) as HTMLHeadElement;
-const resultScreen = document.getElementById( 'result' ) as HTMLHeadElement;
-
+const calcScreen = document.getElementById( 'calc' ) as HTMLHeadingElement;
+const resultScreen = document.getElementById( 'result' ) as HTMLHeadingElement;
 
 function BtnCLickEvent(): void {
   for ( let i: number = 0; i < btns.length; i++ ) {
@@ -16,6 +15,8 @@ function BtnCLickEvent(): void {
         calcScreen.innerHTML = '';
       } else if ( symbol === 'DEL' ) {
         calcScreen.innerHTML = calcScreen.innerHTML.slice( 0, -1 );
+      } else if ( symbol === '=' ) {
+        resultScreen.innerHTML = eval( calcScreen.innerHTML.trim() );
       }
     } );
   }
