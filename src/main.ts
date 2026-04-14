@@ -6,7 +6,11 @@ function CalculateInp(): void {
   let calc: string = calcScreen.value;
 
   if (calc.trim() !== "") {
-    resultScreen.innerHTML = eval(calc.trim());
+    try {
+      resultScreen.innerHTML = eval(calc.trim());
+    } catch (err: Error | unknown) {
+      resultScreen.innerHTML = "SyntaxError";
+    }
   }
 }
 
