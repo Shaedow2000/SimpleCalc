@@ -19,15 +19,15 @@ function BtnCLickEvent(): void {
 
       if (resultScreen.innerHTML.trim() !== "") {
         resultScreen.innerHTML = "";
-        calcScreen.innerHTML = "";
+        calcScreen.value = "";
       }
 
       if (symbol !== "=" && symbol !== "AC" && symbol !== "DEL") {
-        calcScreen.innerHTML += symbol;
+        calcScreen.value += symbol;
       } else if (symbol === "AC") {
-        calcScreen.innerHTML = "";
+        calcScreen.value = "";
       } else if (symbol === "DEL") {
-        calcScreen.innerHTML = calcScreen.innerHTML.slice(0, -1);
+        calcScreen.value = calcScreen.value.slice(0, -1);
       } else if (symbol === "=") {
         CalculateInp();
       }
