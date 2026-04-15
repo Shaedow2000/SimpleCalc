@@ -25,5 +25,4 @@ dist
 
 #configs 
 tsconfig.json
-package.json
 *.config.*
