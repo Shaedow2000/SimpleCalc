@@ -11,7 +11,9 @@
   "devDependencies": {
     "gh-pages": "^6.3.0",
     "typescript": "~5.8.3",
-    "vite": "npm:rolldown-vite@7.1.12"
+    "vite": "npm:rolldown-vite@7.1.12",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "overrides": {
     "vite": "npm:rolldown-vite@7.1.12"
